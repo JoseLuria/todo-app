@@ -1,6 +1,28 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { setTodo } from '../../redux/actions/todos.actions'
 
-const Form = ({handleSetTodos}) => {
+const Form = () => {
+  const { todosList } = useSelector(({ todos }) => todos)
+
+  const dispatch = useDispatch()
+
+  const handleSetTodos = (e) => {
+    e.preventDefault();
+    if (e.target.title.value.length > 0) {
+      const newTodo = {
+        id: +new Date(),
+        title: e.target.title.value,
+        status: false,
+      };
+      const newList = [newTodo, ...todosList]
+      dispatch(setTodo(newList))
+      e.target.title.value = "";
+      localStorage.todos = JSON.stringify(newList);
+    }
+  };
+
   return (
     <form
       onSubmit={(e) => handleSetTodos(e)} 

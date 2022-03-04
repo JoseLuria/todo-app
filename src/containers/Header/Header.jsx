@@ -16,7 +16,7 @@ const Header = ({children}) => {
   return (
     <header className='w-full max-w-custom mx-auto'>
       <div className='w-full flex justify-between mb-[2.125rem] md:mb-10'>
-        <h1 className='font-bold text-[1.625rem] tracking-[0.625rem] text-transparent md:text-[2.5rem] md:tracking-[0.938rem]'>TODO</h1>
+        <h1 className='font-bold text-[1.625rem] tracking-[0.625rem] text-transparent uppercase md:text-[2.5rem] md:tracking-[0.938rem]'>Todo</h1>
         <button onClick={handleChangeTheme} className="outline-none">
           <img className='dark:hidden' width={25.11} height={26} src={MoonLogo} alt="Moon Logo"/>
           <img className='hidden dark:block' width={26} height={26} src={SunLogo} alt="Sun Logo" />
