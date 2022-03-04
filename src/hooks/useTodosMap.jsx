@@ -31,7 +31,7 @@ const useTodosMap = () => {
       );
     }
   };
-  return {handleMapTodos}
+  return { handleMapTodos }
 }
 
 export default useTodosMap

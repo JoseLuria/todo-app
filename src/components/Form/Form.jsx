@@ -32,7 +32,8 @@ const Form = () => {
       </div>
       <input
         name="title" 
-        className='ml-[12px] grow outline-none duration-200 caret-blue text-low-black text-[0.75rem] placeholder:text-gray md:ml-[24px] md:text-[1.125rem] placeholder:dark:text-black-grayish dark:text-grayish' 
+        className='ml-[12px] grow outline-none duration-200 caret-blue text-low-black text-[0.75rem] placeholder:text-gray 
+        md:ml-[24px] md:text-[1.125rem] placeholder:dark:text-black-grayish dark:text-grayish' 
         type="text"
         placeholder='Create a new todo…'
       />
