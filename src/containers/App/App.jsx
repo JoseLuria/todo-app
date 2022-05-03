@@ -13,17 +13,17 @@ function App() {
   const { todosList } = useSelector(({ todos }) => todos);
   const activeTodos = todosList.filter(({ status }) => status === false);
   const completedTodos = todosList.filter(({ status }) => status === true);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.todos) {
       const todosStorage = localStorage.todos;
-      const listOfTodos = JSON.parse(todosStorage) 
-      dispatch(setTodo(listOfTodos))
+      const listOfTodos = JSON.parse(todosStorage);
+      dispatch(setTodo(listOfTodos));
     } else {
       localStorage.setItem("todos", JSON.stringify([]));
     }
-  }, [dispatch]);
+  }, []);
 
   return (
     <Layout>
@@ -31,10 +31,7 @@ function App() {
         <Form />
       </Header>
       <Main activeTodos={activeTodos}>
-        <TodosList
-          activeTodos={activeTodos}
-          completeTodos={completedTodos}
-        />
+        <TodosList activeTodos={activeTodos} completeTodos={completedTodos} />
       </Main>
       <Footer />
     </Layout>

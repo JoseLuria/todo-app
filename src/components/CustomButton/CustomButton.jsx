@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
-  const CustomButton = ({children, bold, action, view}) => {
+const CustomButton = ({ children, bold, action, view }) => {
   return (
-    <button 
-      className={`${bold && "font-bold"} outline-none duration-200 
-      ${view === children ? "text-blue focus:text-blue hover:text-blue" : 
-      "hover:text-dark-gray focus:text-dark-gray dark:hover:text-low-grayish dark:focus:text-low-grayish"}`}
+    <button
+      className={`${bold && "font-bold"} duration-200 
+      ${
+        view === children
+          ? "text-blue focus:text-blue hover:text-blue"
+          : "hover:text-dark-gray focus:text-dark-gray dark:hover:text-low-grayish dark:focus-visible:text-low-grayish"
+      }`}
       onClick={action}
     >
       {children}
-    </button> 
-  )
-}
+    </button>
+  );
+};
 
-export default CustomButton
+export default CustomButton;

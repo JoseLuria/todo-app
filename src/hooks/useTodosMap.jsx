@@ -1,6 +1,6 @@
-import React from 'react'
-import TodoItem from '../components/TodoItem/TodoItem';
-import { Draggable } from 'react-beautiful-dnd';
+import React from "react";
+import TodoItem from "../components/TodoItem/TodoItem";
+import { Draggable } from "react-beautiful-dnd";
 
 const useTodosMap = () => {
   const handleMapTodos = (array, message) => {
@@ -13,10 +13,7 @@ const useTodosMap = () => {
               {...provided.dragHandleProps}
               ref={provided.innerRef}
             >
-              <TodoItem
-                id={id}
-                status={status}
-              >
+              <TodoItem id={id} status={status}>
                 {title}
               </TodoItem>
             </div>
@@ -31,7 +28,7 @@ const useTodosMap = () => {
       );
     }
   };
-  return { handleMapTodos }
-}
+  return { handleMapTodos };
+};
 
-export default useTodosMap
+export default useTodosMap;

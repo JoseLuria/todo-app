@@ -5,38 +5,37 @@ import { setTodo } from "../../redux/actions/todos.actions";
 import { useDispatch } from "react-redux";
 import useTodosMap from "../../hooks/useTodosMap";
 
-const TodosList = ({activeTodos, completeTodos}) => {
+const TodosList = ({ activeTodos, completeTodos }) => {
   const { actual } = useSelector(({ view }) => view);
   const { todosList } = useSelector(({ todos }) => todos);
-  const dispatch = useDispatch()
-  const { handleMapTodos } = useTodosMap()
+  const dispatch = useDispatch();
+  const { handleMapTodos } = useTodosMap();
 
   const handleOnDragEnd = (result) => {
     if (!result.destination) return;
     const todosItems = [...todosList];
     const [orderedTodo] = todosItems.splice(result.source.index, 1);
     todosItems.splice(result.destination.index, 0, orderedTodo);
-    dispatch(setTodo(todosItems))
-    localStorage.todos = JSON.stringify(todosItems)
+    dispatch(setTodo(todosItems));
   };
 
   const handleShowTodos = () => {
-    switch(actual){
+    switch (actual) {
       case "All":
         return handleMapTodos(
           todosList,
           "Your list is empty, add a new task to the list."
-        )
+        );
       case "Active":
         return handleMapTodos(
           activeTodos,
           "It seems that there are no active tasks in the list."
-        )
+        );
       default:
         return handleMapTodos(
           completeTodos,
           "It appears that there are no completed tasks in the list."
-        )  
+        );
     }
   };
 
