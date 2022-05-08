@@ -23,7 +23,7 @@ function App() {
     } else {
       localStorage.setItem("todos", JSON.stringify([]));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <Layout>

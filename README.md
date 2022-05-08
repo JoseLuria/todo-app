@@ -1,10 +1,10 @@
 # 🤖Todo App Challenge
+
 Todo App with drag and drop Challenge from Frontend Mentor
 
 ## 🖼️ Screenshots
 
-![Screenshot](./public/screenshot-light.png)
-![Screenshot](./public/screenshot-dark.png)
+![Screenshot](./public/screenshot.jpg)
 
 ## 🚀 Usage
 
@@ -13,21 +13,24 @@ Clone and run the Repository
 ## Installation
 
 ### First clone the repository form GitHub:
+
 ```shell
 git clone https://github.com/JoseLuria/todo-app.git
 ```
 
 ### Then install the dependencies:
+
 ```shell
 npm install
 ```
 
 #### Finally, start the server with the following command:
+
 ```shell
 npm run dev
 ```
 
-## Built with 
+## Built with
 
 - [React](https://reactjs.org/)
 - [Tailwind](https://tailwindcss.com/)
