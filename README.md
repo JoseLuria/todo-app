@@ -1,4 +1,4 @@
-# 🤖Todo App Challenge
+# 🤖 Todo App Challenge
 
 Todo App with drag and drop Challenge from Frontend Mentor
 
@@ -7,10 +7,6 @@ Todo App with drag and drop Challenge from Frontend Mentor
 ![Screenshot](./public/screenshot.jpg)
 
 ## 🚀 Usage
-
-Clone and run the Repository
-
-## Installation
 
 ### First clone the repository form GitHub:
 
@@ -24,18 +20,18 @@ git clone https://github.com/JoseLuria/todo-app.git
 npm install
 ```
 
-#### Finally, start the server with the following command:
+### Finally, start the server with the following command:
 
 ```shell
 npm run dev
 ```
 
-## Built with
+## ⚙️ Built with
 
 - [React](https://reactjs.org/)
 - [Tailwind](https://tailwindcss.com/)
 - [React Beautiful Dnd](https://github.com/atlassian/react-beautiful-dnd)
 
-## License
+## 📄 License
 
 [MIT](https://opensource.org/licenses/MIT)
